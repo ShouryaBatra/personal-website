@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa"; // Import icons
 import me from "../assets/me.jpg";
+import aimTrainer from "../assets/aimTrainer.png";
+import culturify from "../assets/culturify.png";
+import fireworks from "../assets/fireworks.png";
+import luminaris from "../assets/luminaris.png";
 
 export default function Home() {
   return (
@@ -57,13 +61,12 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Luminaris */}
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-full h-48 bg-gray-700 rounded-lg mb-4">
+            <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
               <Image
-                src="/path-to-luminaris-image.jpg"
+                src={luminaris}
                 alt="Luminaris"
-                width={400}
-                height={192}
-                className="object-cover rounded-lg"
+                fill // Use fill to make the image cover the container
+                className="object-cover" // Ensures the image covers the container without stretching
               />
             </div>
             <h3 className="text-2xl font-bold">Luminaris</h3>
@@ -83,13 +86,12 @@ export default function Home() {
 
           {/* Aim Trainer */}
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-full h-48 bg-gray-700 rounded-lg mb-4">
+            <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
               <Image
-                src="/path-to-aim-trainer-image.jpg" // Replace with your image path
+                src={aimTrainer}
                 alt="Aim Trainer"
-                width={400}
-                height={192}
-                className="object-cover rounded-lg"
+                fill // Use fill to make the image cover the container
+                className="object-cover" // Ensures the image covers the container without stretching
               />
             </div>
             <h3 className="text-2xl font-bold">Aim Trainer</h3>
@@ -108,13 +110,12 @@ export default function Home() {
 
           {/* shadcn Color Theme Switcher */}
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-full h-48 bg-gray-700 rounded-lg mb-4">
+            <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
               <Image
                 src="/path-to-shadcn-theme-image.jpg" // Replace with your image path
                 alt="shadcn Color Theme Switcher"
-                width={400}
-                height={192}
-                className="object-cover rounded-lg"
+                fill // Use fill to make the image cover the container
+                className="object-cover" // Ensures the image covers the container without stretching
               />
             </div>
             <h3 className="text-2xl font-bold">shadcn Color Theme Switcher</h3>
@@ -134,13 +135,12 @@ export default function Home() {
 
           {/* Fireworks */}
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-full h-48 bg-gray-700 rounded-lg mb-4">
+            <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
               <Image
-                src="/path-to-fireworks-image.jpg" // Replace with your image path
+                src={fireworks} // Replace with your image path
                 alt="Fireworks"
-                width={400}
-                height={192}
-                className="object-cover rounded-lg"
+                fill // Use fill to make the image cover the container
+                className="object-cover" // Ensures the image covers the container without stretching
               />
             </div>
             <h3 className="text-2xl font-bold">Fireworks</h3>
@@ -159,13 +159,12 @@ export default function Home() {
 
           {/* Culturify */}
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-full h-48 bg-gray-700 rounded-lg mb-4">
+            <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
               <Image
-                src="/path-to-culturify-image.jpg" // Replace with your image path
+                src={culturify} // Replace with your image path
                 alt="Culturify"
-                width={400}
-                height={192}
-                className="object-cover rounded-lg"
+                fill // Use fill to make the image cover the container
+                className="object-cover" // Ensures the image covers the container without stretching
               />
             </div>
             <h3 className="text-2xl font-bold">Culturify</h3>
