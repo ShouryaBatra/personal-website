@@ -6,6 +6,7 @@ import culturify from "../assets/culturify.png";
 import fireworks from "../assets/fireworks.png";
 import luminaris from "../assets/last.png";
 import colorSwitcher from "../assets/color-switcher.png";
+import website from "../../public/favicon.ico";
 import { HoverEffect } from "../components/ui/card-hover-effect";
 
 export default function Home() {
@@ -52,6 +53,13 @@ export default function Home() {
         "Mobile app for learning about various cultures made with React Native.",
       link: "https://github.com/NotAPokemon/Milpitas-Hacks",
       image: culturify,
+    },
+    {
+      title: "Personal Website",
+      description:
+        "Site made with Next, React, TailwindCSS, and Aceternity ui (this website)",
+      link: "https://github.com/ShouryaBatra/personal-website/",
+      image: website,
     },
   ];
 
