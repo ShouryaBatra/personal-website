@@ -64,7 +64,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="text-center py-20">
         <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-700">
@@ -134,7 +134,7 @@ export default function Home() {
       {/* Contact */}
       <section className="py-16 px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
-        <div className="max-w-2xl mx-auto border border-gray-700 p-10 rounded-lg shadow-lg ">
+        <div className="max-w-2xl mx-auto border border-gray-700 p-10 rounded-lg shadow-lg">
           <form
             className="flex flex-col gap-6"
             action="https://formspree.io/f/xpwarqdd"
@@ -151,7 +151,7 @@ export default function Home() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-transparent text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 placeholder="Enter your name"
                 required
               />
@@ -167,7 +167,7 @@ export default function Home() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-transparent text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 placeholder="Enter your email"
                 required
               />
@@ -183,14 +183,14 @@ export default function Home() {
                 id="message"
                 name="message"
                 rows="6"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-transparent text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 placeholder="Write your message here..."
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-transparent text-white font-semibold py-3 text-lg rounded-lg border border-gray-700 transition-all duration-300 ease-in-out transform active:scale-95 hover:bg-gray-800 hover:shadow-lg"
+              className="w-full bg-gray-800 text-white font-semibold py-3 text-lg rounded-lg transition-all duration-300 ease-in-out transform active:scale-95 hover:bg-gray-700/80 hover:shadow-lg"
             >
               Send Message
             </button>
@@ -208,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-transparent text-gray-400 text-center py-6 mt-16">
+      <footer className="bg-gray-900 text-gray-400 text-center py-6 mt-16">
         <p className="text-lg">
           © {new Date().getFullYear()} Shourya Batra. All rights reserved.
         </p>
