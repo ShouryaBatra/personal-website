@@ -8,6 +8,9 @@ import luminaris from "../assets/last.png";
 import colorSwitcher from "../assets/color-switcher.png";
 import website from "../../public/favicon.ico";
 import { HoverEffect } from "../components/ui/card-hover-effect";
+import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const skills = [
@@ -122,123 +125,31 @@ export default function Home() {
         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
         <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
           {skills.map((skill) => (
-            <div
+            <motion.div
               key={skill}
-              className="bg-gray-800 px-6 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gray-800 px-6 py-3 rounded-full text-lg font-medium shadow-lg cursor-pointer relative overflow-hidden"
+              whileHover={{
+                y: -5,
+                boxShadow: "0 0 20px 5px rgba(79, 70, 229, 0.6)",
+                transition: { duration: 0.3, ease: "easeOut" },
+              }}
+              initial={{ y: 0, boxShadow: "0 0 0px 0px rgba(79, 70, 229, 0)" }}
             >
               {skill}
-            </div>
+              {/* Glow overlay */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 rounded-full"
+                whileHover={{ opacity: 0.2, transition: { duration: 0.3 } }}
+              />
+            </motion.div>
           ))}
         </div>
       </section>
       {/* Contact */}
-      <section className="py-16 px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
-        <div className="max-w-2xl mx-auto border border-gray-700 p-10 rounded-lg shadow-lg">
-          <form
-            className="flex flex-col gap-6"
-            action="https://formspree.io/f/xpwarqdd"
-            method="POST"
-          >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-gray-300 font-medium mb-2 text-lg"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-gray-300 font-medium mb-2 text-lg"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-gray-300 font-medium mb-2 text-lg"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                placeholder="Write your message here..."
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-gray-800 text-white font-semibold py-3 text-lg rounded-lg transition-all duration-300 ease-in-out transform active:scale-95 hover:bg-gray-700/80 hover:shadow-lg"
-            >
-              Send Message
-            </button>
-          </form>
-          <p className="text-center text-gray-400 mt-6 text-lg">
-            Don't want to use the form? Email me at{" "}
-            <a
-              href="mailto:shourya.batra@gmail.com"
-              className="text-blue-400 hover:underline"
-            >
-              shourya.batra at gmail.com
-            </a>
-          </p>
-        </div>
-      </section>
+      <Contact />
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 text-center py-6 mt-16">
-        <p className="text-lg">
-          © {new Date().getFullYear()} Shourya Batra. All rights reserved.
-        </p>
-        <div className="flex justify-center gap-6 mt-4">
-          <a
-            href="https://github.com/ShouryaBatra/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/shourya-batra-b22920344/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href="https://www.youtube.com/@ShoBartHehe/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            <FaYoutube size={24} />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
