@@ -1,6 +1,3 @@
-import Image from "next/image";
-import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
-import me from "../assets/me.jpg";
 import aimTrainer from "../assets/aim.png";
 import culturify from "../assets/culturify.png";
 import fireworks from "../assets/fireworks.png";
@@ -11,6 +8,7 @@ import { HoverEffect } from "../components/ui/card-hover-effect";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import Header from "@/components/Header";
 
 export default function Home() {
   const skills = [
@@ -69,50 +67,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <header className="text-center py-20">
-        <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-700">
-          <Image
-            src={me}
-            alt="Shourya Batra"
-            width={128}
-            height={128}
-            className="object-cover"
-          />
-        </div>
-        <h1 className="text-5xl font-bold mt-6">Shourya Batra</h1>
-        <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-          Freshman at Homestead High School passionate about Computer Science,
-          Volleyball, and Music. I love building projects that solve real-world
-          problems and exploring new technologies.
-        </p>
-        {/* Icons */}
-        <div className="flex justify-center gap-6 mt-8">
-          <a
-            href="https://github.com/ShouryaBatra/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <FaGithub size={28} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/shourya-batra-b22920344/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <FaLinkedin size={28} />
-          </a>
-          <a
-            href="https://www.youtube.com/@ShoBartHehe/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <FaYoutube size={28} />
-          </a>
-        </div>
-      </header>
+      <Header />
 
       {/* Projects */}
       <section className="py-16 px-4">
