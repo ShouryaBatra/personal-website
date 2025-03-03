@@ -3,6 +3,7 @@ import me from "../assets/me.jpg";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 function Header() {
   const [randomDirection, setRandomDirection] = useState(1);
@@ -32,6 +33,16 @@ function Header() {
     },
   };
 
+  const texts = [
+    "Fullstack Developer",
+    "Musician",
+    "Programmer",
+    "Mobile Developer",
+    "Designer",
+    "Boy Scout",
+    "High Schooler",
+  ];
+
   return (
     <header className="text-center py-20">
       <motion.div
@@ -58,6 +69,31 @@ function Header() {
         </div>
       </motion.div>
       <h1 className="text-5xl font-bold mt-6">Shourya Batra</h1>
+      {/* Subheading */}
+      <p className="text-xl text-gray-400 mt-2">
+        I am a{" "}
+        <TypeAnimation
+          sequence={[
+            // Same substring at the start will only be typed once, initially
+            "Fullstack Developer",
+            1000,
+            "Musician",
+            1000,
+            "Programmer",
+            1000,
+            "Mobile Developer",
+            1000,
+            "Designer",
+            1000,
+            "Boy Scout",
+            1000,
+            "High Schooler",
+            1000,
+          ]}
+          speed={50}
+          repeat={Infinity}
+        />
+      </p>
       <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
         Shourya is a freshman at Homestead High School passionate about Computer
         Science, Volleyball, and Music. He loves building web and mobile apps
