@@ -2,27 +2,46 @@ import { motion } from "framer-motion";
 import me from "../assets/me.jpg";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
-
-const profileVariants = {
-  initial: { rotate: 0, y: 0 },
-  hover: {
-    rotate: 540,
-    transition: {
-      type: "spring",
-      damping: 20,
-      duration: 0.5,
-    },
-  },
-};
+import { useState } from "react";
 
 function Header() {
+  const [randomDirection, setRandomDirection] = useState(1);
+
+  // 1 or -1 to multiply to 540
+  const generateRandomDirection = () => {
+    return Math.random() > 0.5 ? 1 : -1;
+  };
+
+  const profileVariants = {
+    initial: { rotate: 0, y: 0 },
+    hover: {
+      rotate: 540 * randomDirection,
+      transition: {
+        type: "spring",
+        damping: 20,
+        duration: 0.5,
+      },
+    },
+    tap: {
+      rotate: 540 * randomDirection,
+      transition: {
+        type: "spring",
+        damping: 20,
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <header className="text-center py-20">
       <motion.div
         className="w-48 h-48 mx-auto rounded-full overflow-hidden relative flex items-center justify-center"
         whileHover="hover"
+        whileTap="tap"
         initial="initial"
         variants={profileVariants}
+        onHoverStart={() => setRandomDirection(generateRandomDirection())}
+        onTapStart={() => setRandomDirection(generateRandomDirection())}
       >
         {/* Circle background */}
         <motion.div className="absolute inset-0 rounded-full " />
