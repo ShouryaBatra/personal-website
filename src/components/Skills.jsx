@@ -3,12 +3,6 @@ import ScrollAnimation from "./ScrollAnimation";
 import { motion } from "framer-motion";
 
 function Skills() {
-  const [randomDirection, setRandomDirection] = useState(1);
-
-  const generateRandomDirection = () => {
-    return Math.random() > 0.5 ? 1 : -1;
-  };
-
   const skills = [
     "React",
     "React Native",
@@ -29,12 +23,12 @@ function Skills() {
               key={skill}
               className="bg-gray-800 px-6 py-3 rounded-full text-lg font-medium shadow-lg cursor-pointer relative overflow-hidden"
               whileHover={{
-                y: -5 * randomDirection,
+                y: -5,
                 boxShadow: "0 0 20px 5px rgba(79, 70, 229, 0.6)",
                 transition: { duration: 0.3, ease: "easeOut" },
               }}
               whileTap={{
-                y: -5 * randomDirection,
+                y: -5,
                 boxShadow: "0 0 20px 5px rgba(79, 70, 229, 0.6)",
                 transition: { duration: 0.3, ease: "easeOut" },
               }}
@@ -42,8 +36,6 @@ function Skills() {
                 y: 0,
                 boxShadow: "0 0 0px 0px rgba(79, 70, 229, 0)",
               }}
-              onHoverStart={() => setRandomDirection(generateRandomDirection())}
-              onTapStart={() => setRandomDirection(generateRandomDirection())}
             >
               {skill}
               <motion.div
