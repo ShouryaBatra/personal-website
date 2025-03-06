@@ -81,6 +81,8 @@ function Header() {
             1000,
             "Programmer",
             1000,
+            "Athlete",
+            1000,
             "Mobile Developer",
             1000,
             "Designer",
