@@ -35,7 +35,11 @@ function Contact() {
           whileTap="tap"
           variants={cardVariants}
         >
-          <form className="flex flex-col gap-6">
+          <form
+            className="flex flex-col gap-6"
+            action="https://formspree.io/f/xpwarqdd"
+            method="POST"
+          >
             <div>
               <label
                 htmlFor="name"
