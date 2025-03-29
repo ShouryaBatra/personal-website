@@ -42,16 +42,29 @@ export async function getServerSideProps() {
 
 export default function Blog({ posts }) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-16 px-4">
-      <h1 className="text-4xl font-bold text-center mb-12">Blog</h1>
-      {posts.length > 0 ? (
-        <HoverEffect items={posts} />
-      ) : (
-        <p className="text-center text-gray-400">No posts available.</p>
-      )}
-      {posts.length === 0 && (
-        <p className="text-center text-gray-400 mt-8">More coming soon!</p>
-      )}
+    <div className="min-h-screen bg-gray-900 text-white py-16 px-4 relative flex flex-col">
+      <div>
+        <h1 className="text-4xl font-bold text-center mb-12">Blog</h1>
+        {posts.length > 0 ? (
+          <HoverEffect items={posts} />
+        ) : (
+          <p className="text-center text-gray-400">No posts available.</p>
+        )}
+        {posts.length === 0 && (
+          <p className="text-center text-gray-400 mt-8">More coming soon!</p>
+        )}
+      </div>
+      <p className="text-center text-gray-400 text-sm absolute bottom-8 left-0 right-0">
+        Content fetched from{" "}
+        <a
+          href="https://shouryabatra.substack.com"
+          className="text-blue-400 hover:text-blue-300 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Shourya's Substack
+        </a>
+      </p>
     </div>
   );
 }
