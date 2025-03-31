@@ -51,7 +51,7 @@ function Navbar() {
                   {item.name}
                   {pathname === item.path && (
                     <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"
                       layoutId="navbar-indicator"
                       transition={{
                         type: "spring",
