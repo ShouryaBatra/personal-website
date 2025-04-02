@@ -33,16 +33,6 @@ function Header() {
     },
   };
 
-  const texts = [
-    "Fullstack Developer",
-    "Musician",
-    "Programmer",
-    "Mobile Developer",
-    "Designer",
-    "Boy Scout",
-    "High Schooler",
-  ];
-
   return (
     <header className="text-center py-20">
       <motion.div
@@ -71,25 +61,25 @@ function Header() {
       <h1 className="text-5xl font-bold mt-6">Shourya Batra</h1>
       {/* Subheading */}
       <p className="text-xl text-gray-400 mt-2">
-        I am a{" "}
+        I am a
         <TypeAnimation
           sequence={[
             // Same substring at the start will only be typed once, initially
-            "Fullstack Developer",
+            " Fullstack Developer",
             1000,
-            "Musician",
+            " Musician",
             1000,
-            "Programmer",
+            " Programmer",
             1000,
-            "Athlete",
+            "n Athlete",
             1000,
-            "Mobile Developer",
+            " Mobile Developer",
             1000,
-            "Designer",
+            " Designer",
             1000,
-            "Boy Scout",
+            " Boy Scout",
             1000,
-            "High Schooler",
+            " High Schooler",
             1000,
           ]}
           speed={50}
