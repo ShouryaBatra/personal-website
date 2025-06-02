@@ -26,8 +26,8 @@ function Projects() {
     {
       title: "shadcn Color Theme Switcher",
       description:
-        "Web app for easy implementation of colored and light/dark mode themes with shadcn ui.",
-      link: "https://github.com/ShouryaBatra/shadcn-color-theme-switcher",
+        "Easy implementation of colored and light/dark mode themes with shadcn ui.",
+      link: "https://github.com/ShouryaBatra/shadcn-color-theme-switcher-next",
       image: colorSwitcher,
     },
     {
