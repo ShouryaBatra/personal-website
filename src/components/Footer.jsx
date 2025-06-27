@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { SiSubstack } from "react-icons/si";
 
 const Footer = () => {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
@@ -47,6 +48,14 @@ const Footer = () => {
           className="hover:text-white transition-colors"
         >
           <FaYoutube size={24} />
+        </a>
+        <a
+          href="https://shouryabatra.substack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition-colors"
+        >
+          <SiSubstack size={22} />
         </a>
       </div>
 

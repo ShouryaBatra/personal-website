@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import me from "../assets/me.jpg";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { SiSubstack } from "react-icons/si";
 import Image from "next/image";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
@@ -116,6 +117,14 @@ function Header() {
           className="text-gray-400 hover:text-white transition-colors"
         >
           <FaYoutube size={28} />
+        </a>
+        <a
+          href="https://shouryabatra.substack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-white transition-colors"
+        >
+          <SiSubstack size={26} />
         </a>
       </div>
     </header>
