@@ -54,7 +54,9 @@ function Projects() {
 
   return (
     <section className="py-16 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12">Some Projects</h2>
+      <h2 className="text-4xl font-bold text-center mb-12 text-primary">
+        Some Projects
+      </h2>
       <HoverEffect items={projects} />
     </section>
   );

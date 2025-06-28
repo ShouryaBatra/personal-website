@@ -26,8 +26,8 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-colors duration-200 ${
-        scrolled ? "bg-gray-900/80 backdrop-blur-sm" : "bg-gray-900"
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-navbar-line transition-colors duration-200 ${
+        scrolled ? "bg-overlay backdrop-blur-sm" : "bg-primary"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-xl font-bold text-white hover:text-gray-300"
+              className="text-xl font-bold text-primary hover:text-tertiary"
             >
               SB
             </Link>
@@ -46,12 +46,12 @@ function Navbar() {
                 <Link
                   key={item.path}
                   href={item.path}
-                  className="relative px-3 py-2 text-sm font-medium text-gray-300 hover:text-white"
+                  className="relative px-3 py-2 text-sm font-medium text-tertiary hover:text-primary"
                 >
                   {item.name}
                   {pathname === item.path && (
                     <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[hsl(var(--navbar-line))]"
                       layoutId="navbar-indicator"
                       transition={{
                         type: "spring",

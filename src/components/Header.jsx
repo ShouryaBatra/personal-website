@@ -48,7 +48,7 @@ function Header() {
         {/* Circle background */}
         <motion.div className="absolute inset-0 rounded-full " />
         {/* Image */}
-        <div className="relative w-40 h-40 rounded-full overflow-hidden border-8 border-gray-700">
+        <div className="relative w-40 h-40 rounded-full overflow-hidden border-8 border-primary">
           <Image
             src={me}
             alt="Shourya Batra"
@@ -59,9 +59,9 @@ function Header() {
           />
         </div>
       </motion.div>
-      <h1 className="text-5xl font-bold mt-6">Shourya Batra</h1>
+      <h1 className="text-5xl font-bold mt-6 text-primary">Shourya Batra</h1>
       {/* Subheading */}
-      <p className="text-xl text-gray-400 mt-2">
+      <p className="text-xl text-secondary mt-2">
         I am a
         <TypeAnimation
           sequence={[
@@ -87,7 +87,7 @@ function Header() {
           repeat={Infinity}
         />
       </p>
-      <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
+      <p className="text-lg text-secondary mt-4 max-w-2xl mx-auto">
         Shourya is a freshman at Homestead High School passionate about Computer
         Science, Volleyball, and Music. He loves building web and mobile apps
         and is currently exploring new technologies.
@@ -98,7 +98,7 @@ function Header() {
           href="https://github.com/ShouryaBatra/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-secondary hover:text-primary transition-colors"
         >
           <FaGithub size={28} />
         </a>
@@ -106,7 +106,7 @@ function Header() {
           href="https://www.linkedin.com/in/shourya-batra-b22920344/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-secondary hover:text-primary transition-colors"
         >
           <FaLinkedin size={28} />
         </a>
@@ -114,7 +114,7 @@ function Header() {
           href="https://www.youtube.com/@ShoBartHehe/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-secondary hover:text-primary transition-colors"
         >
           <FaYoutube size={28} />
         </a>
@@ -122,7 +122,7 @@ function Header() {
           href="https://shouryabatra.substack.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-secondary hover:text-primary transition-colors"
         >
           <SiSubstack size={26} />
         </a>

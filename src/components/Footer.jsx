@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-400 text-center py-6 mt-16 relative overflow-hidden">
+    <footer className="bg-primary text-secondary text-center py-6 mt-16 relative overflow-hidden">
       {/* Copyright */}
       <p className="text-lg cursor-pointer" onClick={handleEasterEgg}>
         © {new Date().getFullYear()} Shourya Batra. All rights reserved.
@@ -29,7 +29,7 @@ const Footer = () => {
           href="https://github.com/ShouryaBatra/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
+          className="hover:text-primary transition-colors"
         >
           <FaGithub size={24} />
         </a>
@@ -37,7 +37,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/shourya-batra-b22920344/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
+          className="hover:text-primary transition-colors"
         >
           <FaLinkedin size={24} />
         </a>
@@ -45,7 +45,7 @@ const Footer = () => {
           href="https://www.youtube.com/@ShoBartHehe/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
+          className="hover:text-primary transition-colors"
         >
           <FaYoutube size={24} />
         </a>
@@ -53,7 +53,7 @@ const Footer = () => {
           href="https://shouryabatra.substack.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
+          className="hover:text-primary transition-colors"
         >
           <SiSubstack size={22} />
         </a>
@@ -63,7 +63,7 @@ const Footer = () => {
       <AnimatePresence>
         {showEasterEgg && (
           <motion.div
-            className="absolute inset-0 flex items-center justify-center bg-gray-900/90 z-50"
+            className="absolute inset-0 flex items-center justify-center bg-overlay z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

@@ -15,13 +15,15 @@ function Skills() {
 
   return (
     <section className="py-16 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
+      <h2 className="text-4xl font-bold text-center mb-12 text-primary">
+        Skills
+      </h2>
       <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
         {skills.map((skill, index) => (
           <ScrollAnimation key={skill} delay={index * 0.1}>
             <motion.div
               key={skill}
-              className="bg-gray-800 px-6 py-3 rounded-full text-lg font-medium shadow-lg cursor-pointer relative overflow-hidden"
+              className="bg-secondary px-6 py-3 rounded-full text-lg font-medium shadow-lg cursor-pointer relative overflow-hidden text-primary"
               whileHover={{
                 y: -5,
                 boxShadow: "0 0 20px 5px rgba(79, 70, 229, 0.6)",

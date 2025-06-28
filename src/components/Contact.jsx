@@ -23,7 +23,9 @@ const gradientVariants = {
 function Contact() {
   return (
     <section className="py-16 px-4 relative overflow-hidden">
-      <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
+      <h2 className="text-4xl font-bold text-center mb-12 text-primary">
+        Contact Me
+      </h2>
       <ScrollAnimation>
         <motion.div
           className="max-w-2xl mx-auto p-10 rounded-lg shadow-lg relative z-20"
@@ -43,7 +45,7 @@ function Contact() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-gray-300 font-medium mb-2 text-lg"
+                className="block text-tertiary font-medium mb-2 text-lg"
               >
                 Name
               </label>
@@ -51,7 +53,7 @@ function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-5 py-3 text-lg rounded-lg bg-primary text-primary border border-primary transition-all"
                 placeholder="Enter your name"
                 required
               />
@@ -59,7 +61,7 @@ function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-gray-300 font-medium mb-2 text-lg"
+                className="block text-tertiary font-medium mb-2 text-lg"
               >
                 Email
               </label>
@@ -67,7 +69,7 @@ function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-5 py-3 text-lg rounded-lg bg-primary text-primary border border-primary focus:outline-none focus:ring-0 focus:border-primary transition-all"
                 placeholder="Enter your email"
                 required
               />
@@ -75,7 +77,7 @@ function Contact() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-gray-300 font-medium mb-2 text-lg"
+                className="block text-tertiary font-medium mb-2 text-lg"
               >
                 Message
               </label>
@@ -83,25 +85,25 @@ function Contact() {
                 id="message"
                 name="message"
                 rows="6"
-                className="w-full px-5 py-3 text-lg rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-5 py-3 text-lg rounded-lg bg-primary text-primary border border-primary focus:outline-none focus-ring-accent focus:border-transparent transition-all"
                 placeholder="Write your message here..."
                 required
               ></textarea>
             </div>
             <motion.button
               type="submit"
-              className="w-full bg-gray-800 text-white font-semibold py-3 text-lg rounded-lg transition-all duration-300 ease-in-out transform active:scale-95 hover:bg-gray-700/80 hover:shadow-lg"
+              className="w-full bg-secondary text-primary font-semibold py-3 text-lg rounded-lg transition-all duration-300 ease-in-out transform active:scale-95 hover:bg-tertiary hover:shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Send Message
             </motion.button>
           </form>
-          <p className="text-center text-gray-400 mt-6 text-lg">
+          <p className="text-center text-secondary mt-6 text-lg">
             Don't want to use the form? Email me at{" "}
             <a
               href="mailto:shourya.batra@gmail.com"
-              className="text-blue-400 hover:underline"
+              className="text-accent-secondary hover:underline"
             >
               shourya.batra at gmail.com
             </a>
