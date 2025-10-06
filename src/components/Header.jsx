@@ -88,9 +88,9 @@ function Header() {
         />
       </p>
       <p className="text-lg text-secondary mt-4 max-w-2xl mx-auto">
-        Shourya is a freshman at Homestead High School passionate about Computer
-        Science, Volleyball, and Music. He loves building web and mobile apps
-        and is currently exploring new technologies.
+        Shourya is a sophomore at Homestead High School passionate about
+        Computer Science, Volleyball, and Music. He loves building web and
+        mobile apps and is currently exploring new technologies.
       </p>
       {/* Icons */}
       <div className="flex justify-center gap-6 mt-8">
