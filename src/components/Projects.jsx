@@ -5,18 +5,20 @@ import aimTrainer from "../assets/aim.png";
 import culturify from "../assets/culturify.png";
 import fireworks from "../assets/fireworks.png";
 import luminaris from "../assets/last.png";
+import SALT from "../assets/SALT.png";
 import colorSwitcher from "../assets/color-switcher.png";
 import website from "../../public/favicon.ico";
 
 function Projects() {
   const projects = [
     {
-      title: "Luminaris",
+      title: "SALT",
       description:
-        "AI study plan maker web app made with React, shadcn ui, and Supabase.",
-      link: "https://github.com/ShouryaBatra/luminaris-version-two",
-      image: luminaris,
+        "Privacy preservation in LLMs using activation steering, accepted to NeurIPS ResponsibleFM 2025.",
+      link: "https://github.com/ShouryaBatra/SALT",
+      image: SALT,
     },
+
     {
       title: "Aim Trainer",
       description: "Fun game made with p5.js to train your mouse aim control.",

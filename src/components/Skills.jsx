@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 function Skills() {
   const skills = [
+    "LLMs",
+    "Machine Learning",
     "React",
     "React Native",
     "Firebase",
