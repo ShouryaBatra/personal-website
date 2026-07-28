@@ -16,7 +16,7 @@ export const HoverEffect = ({ items, className }) => {
       )}
     >
       {items.map((item, idx) => (
-        <ScrollAnimation key={item} delay={idx * 0.1}>
+        <ScrollAnimation key={item?.link ?? idx} delay={idx * 0.1}>
           <Link
             href={item?.link}
             key={item?.link}
@@ -39,14 +39,16 @@ export const HoverEffect = ({ items, className }) => {
               )}
             </AnimatePresence>
             <Card>
-              <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {item.image && (
+                <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
             </Card>

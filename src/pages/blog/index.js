@@ -1,41 +1,44 @@
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Parser from "rss-parser";
 
-export async function getServerSideProps() {
+const FEED_URL = "https://shouryabatra.substack.com/feed";
+
+export async function getStaticProps() {
   const parser = new Parser();
-  const proxyUrl = "https://api.allorigins.win/raw?url=";
-  const feedUrl = "https://shouryabatra.substack.com/feed";
 
   try {
-    const feed = await parser.parseURL(proxyUrl + encodeURIComponent(feedUrl));
+    const response = await fetch(FEED_URL, {
+      signal: AbortSignal.timeout(8000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Feed responded with ${response.status}`);
+    }
+
+    const feed = await parser.parseString(await response.text());
+
     const posts = feed.items.map((item) => {
       // Extract the first image from the content (if available)
-      const imageMatch = item["content:encoded"].match(
-        /<img[^>]+src="([^">]+)"/
-      );
-      const image = imageMatch
-        ? imageMatch[1]
-        : "https://via.placeholder.com/300"; // Fallback image
+      const content = item["content:encoded"] || item.content || "";
+      const imageMatch = content.match(/<img[^>]+src="([^">]+)"/);
 
       return {
         title: item.title,
         description: item.contentSnippet || "No description available.",
         link: item.link,
-        image: image,
+        image: imageMatch ? imageMatch[1] : null,
       };
     });
 
     return {
-      props: {
-        posts,
-      },
+      props: { posts },
+      revalidate: 3600,
     };
   } catch (error) {
     console.error("Failed to fetch Substack posts:", error);
     return {
-      props: {
-        posts: [],
-      },
+      props: { posts: [] },
+      revalidate: 60,
     };
   }
 }
